@@ -9,12 +9,11 @@ mixin buttons
 
 if $title && $url
     div(class='likely#{classes}', data-title=title, data-url=url)
-        +buttons
-        
-elseif $title
+        +buttons    
+else if $title
     div(class='likely#{classes}', data-title=title)
         +buttons
-elseif $url
+else if $url
     div(class='likely#{classes}', data-url=url)
         +buttons
 else

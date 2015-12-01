@@ -221,7 +221,7 @@ make deploy FULL_DEPLOY=true
 return [
     'title'  => 'Помидорковый таймер',
     'name'   => 'pomidorko',
-    'view'   => 'templates/project.php',
-    'layout' => 'layouts/project.php',
+    'view'   => 'templates/project.jade',
+    'layout' => 'layouts/project.jade',
     'processor' => 'markdown'
 ];

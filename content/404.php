@@ -3,7 +3,7 @@
 
 <?php return [
     'title'     => 'Страница не была найдена',
-    'view'      => 'templates/default.php',
+    'view'      => 'templates/full.jade',
     'processor' => 'markdown',
     'not_found' => true
 ]; 

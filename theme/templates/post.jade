@@ -22,4 +22,4 @@ block content
                     li: each tag in tags
                         span.post-tag= tag
             
-                != $theme->partial('blocks/comments.jade')
+            != $theme->partial('blocks/comments.jade', compact('route'))

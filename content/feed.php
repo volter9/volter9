@@ -30,4 +30,4 @@
         <?php endforeach ?> 
     </channel>
 </rss>
-<?php return ['layout' => 'layouts/blank.php'];
+<?php return ['view' => 'layouts/blank.jade'];

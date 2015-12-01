@@ -2,9 +2,9 @@
      id="pomidorko"
      style="background-color: #ED4455; padding-bottom: 40px;">
 
-<?php echo $theme->partial('blocks/navigation.php', [
-    'classes' => 'navigation-white'
-]) ?> 
+<?php echo $theme->partial('blocks/navigation.jade', array_merge($__data__, [
+    'classes' => 'navigation-white navigation-shadow'
+])) ?> 
     
     <div class="fluid">
         <h1 class="epic-header-title">

@@ -20,7 +20,7 @@ use Volter\URL;
 
 $parsedown = Bloge\process('content', [new Parsedown, 'text']);
 
-$renderer = new Renderer(__DIR__ . '/theme');
+$renderer = new Renderer(__DIR__ . '/theme', __DIR__ . '/cache');
 $content  = new Advanced(new Content(__DIR__ . '/content'));
 
 /** Dispatcher: ignore private folders and map 404 and feed to files */

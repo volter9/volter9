@@ -2,7 +2,21 @@
 - $title   = !empty($title)   && is_string($title)   ? $title      : false;
 - $url     = !empty($url)     && is_string($url)     ? $url        : false;
 
-div(class='likely#{classes}', data-title=title, data-url=url)
+mixin buttons
     div.twitter(data-via='volter_9') Твитнуть
     div.vkontakte Поделится
     div.facebook Поделится
+
+if $title && $url
+    div(class='likely#{classes}', data-title=title, data-url=url)
+        +buttons
+        
+if $title
+    div(class='likely#{classes}', data-title=title)
+        +buttons
+if $url
+    div(class='likely#{classes}', data-url=url)
+        +buttons
+else
+    div(class='likely#{classes}')
+        +buttons

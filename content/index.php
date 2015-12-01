@@ -45,7 +45,7 @@ $post = mb_substr($post, 0, mb_strpos($post, '<h2>')); ?>
                 </div>
             </div>
 
-<?php echo $theme->partial('blocks/likely.jade', ['classes' => 'likely-medium', 'content' => $content, 'url' => $url]) ?>
+<?php echo $theme->partial('blocks/likely.jade', ['classes' => 'likely-medium', 'content' => $content]) ?>
         </div>
     </div>
 </div>

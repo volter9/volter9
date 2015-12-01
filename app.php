@@ -8,8 +8,8 @@ require 'theme/functions.php';
 use Bloge\Apps\AdvancedApp;
 use Bloge\Content\Advanced;
 use Bloge\Content\PHP as Content;
-use Bloge\Renderers\PHP as Renderer;
 use Volter\Data;
+use Volter\JadeRenderer as Renderer;
 use Volter\URL;
 
 /**
@@ -44,8 +44,7 @@ $content
     ->mapAll([
         'content' => $content,
         'theme'   => $renderer,
-        'layout'  => 'layouts/main.php',
-        'view'    => 'templates/post.php',
+        'view'    => 'templates/post.jade',
         'data'    => new Data(__DIR__ . '/content/_data'),
         'url'     => new URL('http://volter9.github.io', URL::baseUrl(__DIR__))
     ])

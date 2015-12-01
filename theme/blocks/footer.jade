@@ -1,0 +1,23 @@
+footer.footer
+    div.fluid
+        ul.footer-menu.clearfix
+            li: &copy; 2015
+            li: a(href='http://twitter.com/volter_9', target='_blank') Twitter
+            li: a(href='http://github.com/volter9', target='_blank') GitHub
+            li: a(href='#') Наверх
+            li Powered by
+                    a(href='https://github.com/bloge/bloge') Bloge
+
+if isset($js)
+    each script in js
+        script(type='text/javascript'
+               src=$url->make($script))
+
+script(type='text/javascript',
+       src=$url->make('assets/uploads/likely/likely.js'))
+script(type='text/javascript',
+       src=$url->make('assets/js/spoiler.js'))
+script(type='text/javascript',
+       src=$url->make('assets/js/hljs.js'))
+script(type='text/javascript')
+    typeof hljs !== 'undefined' && hljs.initHighlightingOnLoad();

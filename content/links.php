@@ -18,12 +18,12 @@
     ниже, я уверен, это может кому то пригодится.
 </p>
 
-<?php echo $theme->partial('blocks/likely.php') ?> 
-<?php echo $theme->partial('blocks/comments.php', compact('route')) ?> 
+<?php echo $theme->partial('blocks/likely.jade') ?> 
+<?php echo $theme->partial('blocks/comments.jade', compact('route')) ?> 
 
 <?php
 
 return [
     'title' => 'Ссылки',
-    'view'  => 'templates/full.php'
+    'view'  => 'templates/full.jade'
 ];

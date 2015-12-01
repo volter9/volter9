@@ -10,5 +10,5 @@
 
 <?php return [
     'title' => 'Блог',
-    'view'  => 'templates/default.php'
+    'view'  => 'templates/full.jade'
 ];

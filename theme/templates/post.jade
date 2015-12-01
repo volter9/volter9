@@ -1,0 +1,25 @@
+extends ../layouts/main
+
+block content
+    article.content.full.full-padding.post
+        h1.post-title
+            = title
+    
+        != content
+    
+        div.fluid
+            != $theme->partial('blocks/likely.jade', ['title' => $title, 'classes' => 'likely-medium'])
+        
+            ul.post-details
+                li.post-date
+                    = format_date($date)
+                if !empty($category)
+                    - $slug = slugify($category)
+                
+                    li: span(class='post-category post-#{slug}-category')
+                        = category
+                if !empty($tags)
+                    li: each tag in tags
+                        span.post-tag= tag
+            
+                != $theme->partial('blocks/comments.jade')

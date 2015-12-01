@@ -9,9 +9,9 @@
 
     <div class="likely-separated">
 
-<?php echo $theme->partial('blocks/likely.php', ['classes' => 'likely-big likely-light']) ?> 
-<?php echo $theme->partial('blocks/likely.php', ['classes' => 'likely-light']) ?> 
-<?php echo $theme->partial('blocks/likely.php', ['classes' => 'likely-small likely-light']) ?> 
+<?php echo $theme->partial('blocks/likely.jade', ['classes' => 'likely-big likely-light']) ?> 
+<?php echo $theme->partial('blocks/likely.jade', ['classes' => 'likely-light']) ?> 
+<?php echo $theme->partial('blocks/likely.jade', ['classes' => 'likely-small likely-light']) ?> 
 
     </div>
 </div>

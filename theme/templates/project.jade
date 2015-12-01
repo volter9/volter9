@@ -1,0 +1,9 @@
+extends ../layouts/project
+
+block content
+    - echo Bloge\render(basepath("content/_projects/$name/header.php"), $vars)
+
+    article.content.full.full-padding.post
+        != content
+        
+        != $theme->partial('blocks/likely.jade', compact('title'))

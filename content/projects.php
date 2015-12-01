@@ -26,5 +26,5 @@
 
 <?php return [
     'title' => 'Проекты',
-    'view'  => 'templates/full.php'
+    'view'  => 'templates/full.jade'
 ];

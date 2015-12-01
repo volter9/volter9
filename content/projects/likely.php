@@ -121,7 +121,7 @@ module.exports = function (value) {
 return [
     'title'  => 'Лайкли',
     'name'   => 'likely',
-    'view'   => 'templates/project.php',
-    'layout' => 'layouts/project.php',
+    'view'   => 'templates/project.jade',
+    'layout' => 'layouts/project.jade',
     'processor' => 'markdown'
 ];

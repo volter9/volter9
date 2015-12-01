@@ -1,0 +1,10 @@
+- $classes = isset($classes) ? " $classes" : ''
+
+nav(class='fluid navigation#{classes}')
+    ul.clearfix.links
+        each item in $data->get('navigation')
+            li.left
+                - $current = $url->isCurrent($item['url'], $route) ? 'current' : ''
+            
+                a(class=$current, href=$url->make($item['url']))
+                    = item.title

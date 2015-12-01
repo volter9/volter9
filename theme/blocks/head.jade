@@ -1,0 +1,17 @@
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+
+title #{!empty($title) ? "$title – " : ''} volter9.github.io
+
+link(href=$url->make('assets/uploads/likely/likely.css'), rel='stylesheet')
+link(href=$url->make('assets/css/main.css'), rel='stylesheet')
+link(href=$url->make('assets/css/theme.css'), rel='stylesheet')
+
+if isset($css)
+    each styles in css
+        link(href=$url->make($styles), rel='stylesheet')
+
+link(rel="alternate", 
+     type="application/rss+xml",
+     title="RSS Title", 
+     href=$url->make('feed.xml'))

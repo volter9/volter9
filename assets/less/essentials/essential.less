@@ -1,0 +1,82 @@
+/**
+ * Essential styles
+ */
+
+.clearfix:after {
+    content: "";
+    font-size: 0px;
+    visibility: hidden;
+    
+    clear: both;
+    display: block;
+    float: none;
+    height: 1px;
+    width: 100%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.full-padding > *,
+.fluid {
+    padding-left: @margin;
+    padding-right: @margin / 2;
+    max-width: 800px;
+}
+
+.wrapper {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    
+    min-height: 100%;
+    max-width: @wrapper-width;
+    margin: 0px auto;
+    padding-bottom: 5em;
+}
+
+.columns-2 > * {
+    width: 50%;
+}
+
+.adaptive {
+    margin-left: @margin;
+}
+
+.content {
+    overflow: hidden;
+    padding-top: 1px;
+}
+
+.full {
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0px;
+    width: 100%;
+}
+
+@media (max-width: @min-width) {
+    .full-padding > *,
+    .fluid {
+        max-width: 100%;
+        width: 100%;
+        padding-left: @margin-mobile;
+    }
+    
+    .adaptive {
+        margin-left: @margin-mobile;
+    }
+    
+    .full {
+        margin-left: 0px;
+        margin-right:0px;
+        padding: 0px;
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "/var/www/Sandbox/bloge/core/.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Volter\\": "src/"
+        }
+    },
+    "require": {
+        "bloge/bloge": "dev-master",
+        "kylekatarnls/jade-php": "^1.3"
+    }
+}

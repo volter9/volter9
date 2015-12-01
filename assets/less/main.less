@@ -1,0 +1,34 @@
+/**
+ * Welcome there, traveler
+ * 
+ * @author volter9
+ * @package volter9.github.io - my website
+ */
+
+/** Essentials */
+@import 'essentials/variables';
+@import 'essentials/general';
+@import 'essentials/typography';
+@import 'essentials/essential';
+
+/** Blocks */
+@import 'blocks/navigation';
+@import 'blocks/epic-header';
+@import 'blocks/footer';
+@import 'blocks/blog';
+@import 'blocks/projects';
+@import 'blocks/about-me';
+
+/** Components */
+@import 'components/spoiler';
+@import 'components/tab';
+
+.likely-separated > .likely {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.likely-separated .likely:last-child,
+.likely-separated .likely:last-child > * {
+    margin-bottom: 0px;
+}

@@ -1,0 +1,74 @@
+/**
+ * Projects styles
+ */
+
+.projects {
+    padding-left: @margin;
+    padding-right: @margin;
+}
+
+.project:first-child {
+    border-radius: @radius @radius 0px 0px;
+}
+
+.project:last-child {
+    border-radius: 0px 0px @radius @radius;
+}
+
+.project {
+    overflow: hidden;
+}
+
+.project h2 {
+    margin-top: 0px;
+}
+
+.project-title,
+.project-about {
+    color: #fff;
+}
+
+.project-title a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.project-title a:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+}
+
+.project-title {
+    font-size: 18px;
+}
+
+.project-about {
+    font-size: 12px;
+    
+    margin-bottom: 3em;
+}
+
+.project-image {
+    background-repeat: no-repeat;
+    background-position: left center;
+    
+    max-width: 100%;
+    padding: @margin;
+    width: 100%;
+}
+
+@media (max-width: @min-width) {
+    .project-image {
+        padding: @margin-mobile;
+    }
+}
+
+@media (max-width: @wrapper-width) {
+    .projects {
+        padding: 0px;
+    }
+    
+    .projects .project {
+        border-radius: 0px;
+    }
+}

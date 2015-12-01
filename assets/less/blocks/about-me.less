@@ -1,0 +1,42 @@
+/**
+ * About me section
+ */
+
+.about-me-text {
+    width: 85%;
+}
+
+.about-me-text h2 {
+    margin-top: 0px;
+}
+
+.about-me-text p:last-child {
+    margin: 0px;
+}
+
+.about-me-avatar {
+    background-image: url('../img/avatar_medium.png');
+    background-position: center -12px;
+    border-radius: 8px;
+    
+    height: 180px;
+    margin-right: 16px;
+    width: 180px;
+}
+
+@media (max-width: @min-width) {
+    .about-me {
+        margin-top: -@margin-mobile;
+    }
+    
+    .about-me-text {
+        width: 100%;
+    }
+    
+    .about-me-avatar {
+        float: none;
+        margin: 0px auto;
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+    }
+}

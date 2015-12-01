@@ -1,0 +1,146 @@
+/** 
+ * Blog styles
+ */
+
+.blog {
+    margin-bottom: 1em;
+}
+
+.blog h1 {
+    margin-top: 1em;
+}
+
+.post-title {
+    font-size: 32px;
+    
+    margin-top: 0px;
+}
+
+/**
+ * Blog posts
+ */
+
+.posts,
+.links {
+    margin: 0px;
+}
+
+.post {
+    width: 100%;
+    max-width: 100%;
+    padding-left: @margin;
+    padding-right: @margin;
+}
+
+.post .likely__widget:first-child {
+    margin-left: -3px;
+}
+
+.post .likely__widget:first-child {
+    margin-left: -2px !important;
+}
+
+.likely-separated .likely__widget {
+    margin-bottom: 0.4em;
+}
+
+.post pre {
+    background-color: #f4f4f4;
+    font-family: Menlo, Monaco, monospace;
+    font-size: 14px;
+    overflow: hidden;
+    overflow-x: auto;
+    
+    max-width: 100%;
+    padding: 0px;
+}
+
+.post pre code {
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    
+    display: block;
+    padding: @margin-mobile;
+}
+
+.post > pre {
+    border-radius: @radius;
+}
+
+.post hr {
+    max-width: 100%;
+}
+
+.post-details {
+    font-size: 12px;
+    
+    margin-top: 12px;
+    margin-left: 0px;
+}
+
+.post-details li {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+.post-date {
+    color: #888;
+}
+
+.post-category {
+    background-color: #eee;
+    border-radius: 3px;
+    
+    padding: 3px 6px;
+}
+
+.post-tag {
+    color: #666;
+    
+    margin-right: 6px;
+}
+
+/** 
+ * Custom category styles 
+ */
+
+.post-javascript-category,
+.post-dogescript-category {
+    background-color: hsl(50, 90%, 70%);
+}
+
+.post-php-category {
+    background-color: hsl(225, 41%, 56%);
+    color: #fff;
+}
+
+.post-comments {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+@media (max-width: @min-width) {
+    .post {
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: @wrapper-width) {
+    .post {
+        padding: 0px;
+    }
+    
+    .post > pre {
+        border-radius: 0px;
+        padding-left: @margin-mobile;
+        padding-right: @margin-mobile;
+    }
+}
+
+@media (min-width: @wrapper-width) {
+    .post > * {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

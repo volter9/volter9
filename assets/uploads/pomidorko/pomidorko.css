@@ -1,0 +1,147 @@
+.resting {
+    background-color: #08B1CF !important;
+}
+
+.resting .pa-timer-control {
+    background-color: #68C4DB;
+}
+
+.hidden {
+    display: none;
+}
+
+.clearfix:after {
+    content: "";
+    font-size: 0px;
+    visibility: hidden;
+    
+    clear: both;
+    display: block;
+    height: 0px;
+    width: 100%;
+}
+
+/**
+ * Container
+ */
+
+#pomidorko {
+    background-color: #ED4455;
+    
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.pa-skip {
+    background-color: transparent;
+    border: 0px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    
+    margin-top: 10px;
+    padding-bottom: 1px;
+}
+
+.pa-skip span {
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.pa-skip span:hover {
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.9);
+}
+
+/**
+ * Timer itself
+ */
+
+.pa-timer {
+    text-align: center;
+    
+    position: relative;
+}
+
+.pa-left-block {
+    float: left;
+    
+    width: 140px;
+}
+
+.pa-right-block {
+    overflow: hidden;
+    
+    margin-left: 150px;
+}
+
+.pa-timer-time {
+    color: #fff;
+    font-family: 'Lato', 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    font-size: 0px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.pa-timer-time span {
+    font-size: 24px;
+}
+
+.pa-timer-time .pa-colon {
+    position: relative;
+}
+
+.pa-timer-wrapper {
+    margin-top: 2.5em;
+    width: 3300px;
+}
+
+.pa-timer-control {
+    background-color: #EB6169;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 4em;
+    line-height: 140px;
+    text-align: center;
+    
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    
+    height: 120px;
+    margin: 0px auto;
+    width: 120px;
+}
+
+.pa-timer-control span {
+    background-image: url('img/play-pause.png');
+    background-repeat: no-repeat;
+    
+    display: inline-block;
+    margin: 0px auto;
+    height: 64px;
+    width: 64px;
+}
+
+.pa-timer-control .pa-play {
+    background-position: 0px 0px;
+}
+
+.pa-timer-control .pa-pause {
+    background-position: -64px 0px;
+}
+
+.pa-timer-control.pa-play {
+    padding-left: 10px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .pa-timer-control span {
+        background-image: url('img/play-pause@2x.png');
+        background-size: 128px 64px;
+    }
+}

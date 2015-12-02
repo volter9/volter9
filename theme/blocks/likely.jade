@@ -8,13 +8,13 @@ mixin buttons
     div.facebook Поделится
 
 if $title && $url
-    div(class='likely#{classes}', data-title=title, data-url=url)
-        +buttons    
-else if $title
-    div(class='likely#{classes}', data-title=title)
+    div(class='likely#{classes}', data-url=$url, data-title=$title)
         +buttons
-else if $url
-    div(class='likely#{classes}', data-url=url)
+elseif $title
+    div(class='likely#{classes}', data-title=$title)
+        +buttons
+elseif $url
+    div(class='likely#{classes}', data-url=$url)
         +buttons
 else
     div(class='likely#{classes}')

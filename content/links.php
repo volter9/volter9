@@ -18,7 +18,7 @@
     ниже, я уверен, это может кому то пригодится.
 </p>
 
-<?php echo $theme->partial('blocks/likely.jade') ?> 
+<?php echo $theme->partial('blocks/likely.jade', ['classes' => 'likely-medium']) ?> 
 <?php echo $theme->partial('blocks/comments.jade', compact('route')) ?> 
 
 <?php

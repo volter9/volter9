@@ -8,8 +8,8 @@ require 'theme/functions.php';
 use Bloge\Apps\AdvancedApp;
 use Bloge\Content\Advanced;
 use Bloge\Content\PHP as Content;
+use Bloge\Renderers\Jade as Renderer;
 use Volter\Data;
-use Volter\JadeRenderer as Renderer;
 use Volter\URL;
 
 /**

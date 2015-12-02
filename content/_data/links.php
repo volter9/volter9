@@ -59,5 +59,9 @@ return array_reverse([
     // 27-11-15
     'https://github.com/Trismegiste/Are-Php-Traits-Good-Or-Evil' => 'PHP Traits: Плохо или Хорошо?',
     'https://github.com/mustangostang/spyc' => 'Легкий парсер/дампер YAML',
-    'https://moquet.net/blog/5-features-about-composer-php/' => '5 features about Composer'
+    'https://moquet.net/blog/5-features-about-composer-php/' => '5 features about Composer',
+    // 01-12-15
+    'http://vuejs.org' => 'Аналог AngularJS',
+    'http://cactusformac.com' => 'Кактус статический генератор сайтов',
+    'https://www.reddit.com/r/Xcom/comments/3umiec/i_made_an_xcom_game_in_excel/' => 'XCOM в экселе'
 ]);

@@ -12,6 +12,7 @@
     },
     "require": {
         "bloge/bloge": "dev-master",
+        "bloge/jade-renderer": "dev-master",
         "kylekatarnls/jade-php": "^1.3"
     }
 }

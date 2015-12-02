@@ -3,7 +3,7 @@
      style="background-color: #ED4455; padding-bottom: 40px;">
 
 <?php echo $theme->partial('blocks/navigation.jade', array_merge($__data__, [
-    'classes' => 'navigation-white navigation-shadow'
+    'classes' => 'navigation-white'
 ])) ?> 
     
     <div class="fluid">

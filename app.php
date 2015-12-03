@@ -1,6 +1,13 @@
 <?php
 
+/**
+ * @const string BASEPATH
+ */
 define('BASEPATH', __DIR__);
+
+/**
+ * @const bool DYNAMIC
+ */
 define('DYNAMIC', PHP_SAPI !== 'cli');
 
 require 'theme/functions.php';

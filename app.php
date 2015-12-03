@@ -43,6 +43,9 @@ $content
         return @$data['processor'] === 'markdown' 
             ? $parsedown($route, $data)
             : $data;
+    })
+    ->add(function ($route, array $data) {
+        return isset($data['draft']) ? [] : $data;
     });
 
 /** DataMapper: map default variables, route and content map */

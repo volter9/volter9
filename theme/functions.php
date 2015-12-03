@@ -72,9 +72,16 @@ function spoiler_code ($content, $lang, $size = '', $classes = '') {
  * @param int $limit
  * @return array
  */
-function blog_posts (\Bloge\Content\IContent $content, $limit = 0) {
+function blog_posts (Bloge\Content\IContent $content, $limit = 0) {
     $posts = array_map(
-        [$content, 'fetch'], 
+        function ($file) use ($content) {
+            try {
+                return $content->fetch($file);
+            }
+            catch (Bloge\NotFoundException $e) {
+                return false;
+            }
+        },
         $content->browse('blog')
     );
     
@@ -82,6 +89,8 @@ function blog_posts (\Bloge\Content\IContent $content, $limit = 0) {
         return strtotime($b['date']) 
              - strtotime($a['date']);
     });
+    
+    $posts = array_filter($posts);
     
     return $limit
         ? array_slice($posts, 0, $limit)

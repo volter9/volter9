@@ -63,5 +63,8 @@ return array_reverse([
     // 01-12-15
     'http://vuejs.org' => 'Аналог AngularJS',
     'http://cactusformac.com' => 'Кактус статический генератор сайтов',
-    'https://www.reddit.com/r/Xcom/comments/3umiec/i_made_an_xcom_game_in_excel/' => 'XCOM в экселе'
+    'https://www.reddit.com/r/Xcom/comments/3umiec/i_made_an_xcom_game_in_excel/' => 'XCOM в экселе',
+    // 30-12-15
+    'http://undefinedvalue.com/2009/07/07/adding-custom-view-nsstatusitem' => 'Кастомное представление для NSStatusItem',
+    'http://stackoverflow.com/questions/23313571/hiding-the-dock-icon-without-hiding-the-menu-bar' => 'Cocoa: Как скрыть иконку в доке'
 ]);

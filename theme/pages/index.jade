@@ -23,7 +23,6 @@ block content
                     
                         ul(style="margin: 0px")
                             each project in projects
-                                - $project_url = $url->make('projects/' . $project['name'])
                                 li
-                                    a(href=project_url)
+                                    a(href=$url->make('projects/' . $project['name']))
                                         = project.title

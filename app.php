@@ -2,12 +2,11 @@
 
 /**
  * @const string BASEPATH
- */
-define('BASEPATH', __DIR__);
-
-/**
+ * @const string FULL_URL
  * @const bool DYNAMIC
  */
+define('BASEPATH', __DIR__);
+define('FULL_URL', 'http://volter9.github.io');
 define('DYNAMIC', PHP_SAPI !== 'cli');
 
 require 'theme/functions.php';
@@ -27,8 +26,8 @@ use Volter\URL;
 
 $parsedown = Bloge\process('content', [new Parsedown, 'text']);
 
-$renderer = new Renderer(__DIR__ . '/theme', __DIR__ . '/cache');
-$content  = new Advanced(new Content(__DIR__ . '/content'));
+$renderer = new Renderer(basepath('theme'), basepath('cache'));
+$content  = new Advanced(new Content(basepath('content')));
 
 /** 
  * Dispatcher: ignore private folders and map 404 and feed to files 
@@ -58,10 +57,10 @@ $content
     ->dataMapper()
     ->mapAll([
         'container' => $content,
-        'theme'   => $renderer,
-        'view'    => 'templates/post.jade',
-        'data'    => new Data(__DIR__ . '/content/_data'),
-        'url'     => new URL('http://volter9.github.io', URL::baseUrl(__DIR__))
+        'theme'     => $renderer,
+        'view'      => 'templates/post.jade',
+        'data'      => new Data(basepath('content/_data')),
+        'url'       => new URL(FULL_URL, URL::baseUrl(__DIR__))
     ])
     ->mapAll(function ($route) {
         return compact('route');

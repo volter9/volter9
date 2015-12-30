@@ -5,22 +5,18 @@ rss(
     xmlns:dc="http://purl.org/dc/elements/1.1/"
 )
     channel
-        - $full = $url->makeFull('feed')
-        
         title volter9.github.io
         description Личный блог volter9
         link http://volter9.github.io
         atom:link(
-            href=$full,
             rel="self",
-            type="application/rss+xml"
+            type="application/rss+xml",
+            href=$url->makeFull('feed')
         )
         
         each post in posts
-            - $full_url = $url->makeFull($post['route'])
-            
             item= post.title
-            guid(isPermaLink="true")= full_url
+            guid(isPermaLink="true")= $url->makeFull($post['route'])
             description= post.content
             pubdate
                 - echo date('r', strtotime($post['date']))

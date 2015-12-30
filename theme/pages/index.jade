@@ -1,0 +1,29 @@
+extends ../layouts/main
+
+block content
+    // Обо мне
+    div.about-me.full
+        div.fluid.clearfix
+            div.about-me-text.left
+                h2 Немножко обо мне
+            
+                != content
+                // А также я люблю дразнить дизайнеров таким расположением блока :P
+            
+                div.columns-2.clearfix
+                    // Блог
+                    div.blog.left
+                        h3 Последнии записи
+                    
+                        include ../snippets/posts
+                
+                    // Проекты
+                    div.blog.left
+                        h3 Проекты
+                    
+                        ul(style="margin: 0px")
+                            each project in projects
+                                - $project_url = $url->make('projects/' . $project['name'])
+                                li
+                                    a(href=project_url)
+                                        = project.title

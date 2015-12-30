@@ -30,29 +30,34 @@ $parsedown = Bloge\process('content', [new Parsedown, 'text']);
 $renderer = new Renderer(__DIR__ . '/theme', __DIR__ . '/cache');
 $content  = new Advanced(new Content(__DIR__ . '/content'));
 
-/** Dispatcher: ignore private folders and map 404 and feed to files */
+/** 
+ * Dispatcher: ignore private folders and map 404 and feed to files 
+ */
 $content
     ->dispatcher()
     ->map(require 'content/_data/mappings.php')
     ->ignore(Bloge\rFilter('/^_|\/_/'));
 
-/** Processor: process markdown inside of the articles */
+/** 
+ * Processor: process markdown inside of the articles 
+ */
+
 $content
     ->processor()
     ->add(function ($route, array $data) use ($parsedown) {
         return @$data['processor'] === 'markdown' 
             ? $parsedown($route, $data)
             : $data;
-    })
-    ->add(function ($route, array $data) {
-        return isset($data['draft']) ? [] : $data;
     });
 
-/** DataMapper: map default variables, route and content map */
+/** 
+ * DataMapper: map default variables, route and content map 
+ */
+
 $content
     ->dataMapper()
     ->mapAll([
-        'content' => $content,
+        'container' => $content,
         'theme'   => $renderer,
         'view'    => 'templates/post.jade',
         'data'    => new Data(__DIR__ . '/content/_data'),

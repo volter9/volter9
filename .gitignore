@@ -8,3 +8,6 @@ vendor/
 # Build
 /build
 /cache
+
+# Assets
+assets/css/main.css

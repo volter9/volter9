@@ -1,56 +1,15 @@
-<?php
+<p>
+    Добро пожаловать! Меня зовут Евгений, но я также известен под ником volter9.
+</p>
 
-/**
- * Index page
- */
-
-$hello = $content->fetch('blog/hello-world');
-
-$post = $hello['content'];
-$post = mb_substr($post, 0, mb_strpos($post, '<h2>')); ?>
-
-<!-- Обо мне -->
-<div class="about-me full">
-    <div class="fluid clearfix">        
-        <div class="about-me-text left">
-            <h2>Немножко обо мне</h2>
-
-<?php echo $post ?> 
-<!-- А также я люблю дразнить дизайнеров таким расположением блока :P -->
-            
-            <div class="columns-2 clearfix">
-                <!-- Блог -->
-                <div class="blog left">
-                    <h3>Последнии записи</h3>
-
-<?php echo Bloge\render(
-    basepath('content/blog.php'), 
-    ['content' => $content, 'limit' => 5, 'url' => $url]
-) ?> 
-                </div>
-                
-                <!-- Проекты -->
-                <div class="blog left">
-                    <h3>Проекты</h3>
-                
-                    <ul style="margin: 0px">
-                    <?php foreach (array_slice($data->get('projects'), 0, 5) as $project): ?> 
-                        <li>
-                            <a href="<?php echo $url->make('projects/' . $project['name']) ?>">
-                                <?php echo $project['title'] ?>
-                            </a>
-                        </li>
-                    <?php endforeach ?> 
-                    </ul>
-                </div>
-            </div>
-
-<?php echo $theme->partial('blocks/likely.jade', ['classes' => 'likely-medium', 'content' => $content]) ?>
-        </div>
-    </div>
-</div>
+<p>
+    В данном блоге я буду писать о веб технологиях (HTML/CSS, PHP, JS) и выкладывать 
+    свои проекты на обозрение. Тут я буду писать разные туториалы, обзоры, идеи, 
+    эксперименты и все что может быть связано с интернетом и веб технологиями.
+</p>
 
 <?php return [
-    'title' => '', 
-    'view' => 'templates/custom.jade'
+    'projects' => array_slice($data->get('projects'), 0, 5),
+    'posts'    => blog_posts($container, 5),
+    'view'     => 'pages/index.jade'
 ]; 

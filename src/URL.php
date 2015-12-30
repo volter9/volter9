@@ -94,6 +94,8 @@ class URL
      */
     public function isCurrent($url, $route)
     {
+        $url = $url === '' ? 'index' : $url;
+        
         return $url === $route 
             || $url !== '' 
             && strpos($route, $url) === 0;

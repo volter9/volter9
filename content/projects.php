@@ -1,4 +1,4 @@
-<?php $projects = isset($projects) ? $projects : $data->get('projects') ?>
+<?php $projects = $data->get('projects') ?>
 
 <div class="clearfix full projects">
 <?php foreach ($projects as $project): ?> 

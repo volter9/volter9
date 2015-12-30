@@ -142,14 +142,14 @@ hr {
 .fluid {
     padding-left: 32px;
     padding-right: 16px;
-    max-width: 800px;
+    max-width: 900px;
 }
 .wrapper {
     position: relative;
     top: 0;
     left: 0;
     min-height: 100%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding-bottom: 5em;
 }
@@ -170,7 +170,7 @@ hr {
     padding: 0;
     width: 100%;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .full-padding > *,
     .fluid {
         max-width: 100%;
@@ -184,6 +184,9 @@ hr {
         margin-left: 0;
         margin-right: 0;
         padding: 0;
+    }
+    .columns-2 > * {
+        width: 100%;
     }
 }
 /** Blocks */
@@ -238,7 +241,7 @@ hr {
 .text-shadow {
     text-shadow: 0 0 10px #000;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .navigation {
         padding-left: 4px;
     }
@@ -257,11 +260,11 @@ hr {
 .epic-header-title {
     color: #fff;
     font-size: 48px;
-    font-weight: 100;
+    font-weight: 300;
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     .epic-header {
         border-radius: 0;
     }
@@ -385,12 +388,12 @@ hr {
     margin-top: 2em;
     margin-bottom: 2em;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .post {
         padding-left: 0;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     .post {
         padding: 0;
     }
@@ -400,7 +403,7 @@ hr {
         padding-right: 16px;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
     .post > * {
         padding-left: 0;
         padding-right: 0;
@@ -451,12 +454,12 @@ hr {
     padding: 32px;
     width: 100%;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .project-image {
         padding: 16px;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     .projects {
         padding: 0;
     }
@@ -476,15 +479,7 @@ hr {
 .about-me-text p:last-child {
     margin: 0;
 }
-.about-me-avatar {
-    background-image: url("../img/avatar_medium.png");
-    background-position: center -12px;
-    border-radius: 8px;
-    height: 180px;
-    margin-right: 16px;
-    width: 180px;
-}
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .about-me {
         margin-top: -16px;
     }
@@ -564,14 +559,14 @@ hr {
     -webkit-transform: rotate(-90deg);
     margin-right: 3px;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .spoiler {
         margin-left: 0;
         margin-right: 0;
         padding: 0;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     .spoiler {
         border-radius: 0;
     }
@@ -624,7 +619,7 @@ hr {
     background-color: #eee;
     cursor: pointer;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .tabs ~ * {
         padding-left: 0;
     }
@@ -640,7 +635,7 @@ hr {
         padding: 6px 14px;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     .tabs-container {
         border-radius: 0;
     }

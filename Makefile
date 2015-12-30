@@ -20,7 +20,7 @@ all: build
 
 # Build HTML pages
 build: clean css
-	vendor/bin/bloge app.php build
+	vendor/bin/bloge app.php build -v
 	
 	mkdir build/assets
 	cp -r assets/js build/assets/js
@@ -32,9 +32,6 @@ build: clean css
 css:
 	lessc assets/less/main.less assets/css/main.css
 	csscomb assets/css/main.css
-
-watch_css:
-	less-watch-compiler assets/less assets/css
 
 # Commit changes to the build website
 commit: build
@@ -61,3 +58,6 @@ clean:
 	                 ! -name '.git*' \
 	                 ! -name 'README.md' \
 	                   -exec rm -rf {} \;
+
+server: build
+	php -S localhost:2000 -t ./build

@@ -1,14 +1,5 @@
-<ul class="posts">
-<?php foreach (blog_posts($content, isset($limit) ? $limit : 0) as $data): ?> 
-    <li>
-        <a href="<?php echo $url->make($data['route']) ?>">
-            <?php echo $data['title'] ?> 
-        </a>
-    </li>
-<?php endforeach; ?> 
-</ul>
-
 <?php return [
     'title' => 'Блог',
-    'view'  => 'templates/full.jade'
+    'posts' => blog_posts($container, 10),
+    'view'  => 'pages/blog.jade',
 ];

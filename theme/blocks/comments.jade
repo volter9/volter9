@@ -6,7 +6,7 @@ if !isset($no_comments) && !DYNAMIC
     
     :javascript
         var disqus_config = function () {
-            this.page.url = '<?php echo "http://volter9.github.io/blog/$route" ?>';
+            this.page.url = '<?php echo FULL_URL . "/$route" ?>';
             this.page.identifier = '<?php echo $route ?>';
         };
     

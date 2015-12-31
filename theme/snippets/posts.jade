@@ -1,5 +1,4 @@
 ul.posts
     each post in posts
         li
-            a(href=$url->make($post['route']))
-                = post.title
+            a(href=$url->make($post['route']))= post.title

@@ -358,6 +358,7 @@ hr {
     font-size: 12px;
     margin-top: 12px;
     margin-left: 0;
+    padding: 0 !important;
 }
 .post-details li {
     display: inline-block;
@@ -443,6 +444,9 @@ hr {
  */
 .about-me-text h2 {
     margin-top: 0;
+}
+.about-me ul {
+    padding: 0;
 }
 .about-me-text p:last-child {
     margin: 0;

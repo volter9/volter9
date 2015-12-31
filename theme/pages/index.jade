@@ -21,7 +21,7 @@ block content
                     div.blog.left
                         h3 Проекты
                     
-                        ul(style="margin: 0px")
+                        ul
                             each project in projects
                                 li
                                     a(href=$url->make('projects/' . $project['name']))

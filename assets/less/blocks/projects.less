@@ -7,18 +7,6 @@
     padding-right: @margin;
 }
 
-.project:first-child {
-    border-radius: @radius @radius 0px 0px;
-}
-
-.project:last-child {
-    border-radius: 0px 0px @radius @radius;
-}
-
-.project {
-    overflow: hidden;
-}
-
 .project h2 {
     margin-top: 0px;
 }
@@ -38,27 +26,9 @@
     margin-bottom: 3em;
 }
 
-.project-image {
-    background-repeat: no-repeat;
-    background-position: left center;
-    
-    max-width: 100%;
-    padding: @margin;
-    width: 100%;
-}
-
-@media (max-width: @min-width) {
-    .project-image {
-        padding: @margin-mobile;
-    }
-}
-
 @media (max-width: @wrapper-width) {
     .projects {
-        padding: 0px;
-    }
-    
-    .projects .project {
-        border-radius: 0px;
+        padding-left: @margin-mobile;
+        padding-right: @margin-mobile;
     }
 }

@@ -22,8 +22,9 @@
  */
 
 #pomidorko {
-    color: #fff;
     background-color: #ED4455;
+    border-radius: 8px;
+    color: #fff;
     overflow: hidden;
     
     position: relative;
@@ -33,7 +34,8 @@
     height: 100%;
     margin: 0px auto;
     min-height: 480px;
-    width: 320px;
+    max-width: 320px;
+    width: 100%;
 }
 
 .pa-skip {
@@ -160,4 +162,10 @@
 
 .resting .pa-timer-control {
     background-color: #68C4DB;
+}
+
+@media (max-width: 320px) {
+    #pomidorko {
+        border-radius: 0px;
+    }
 }

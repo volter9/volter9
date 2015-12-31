@@ -45,6 +45,7 @@
     overflow-x: auto;
     
     max-width: 100%;
+    padding: 0px;
 }
 
 .post pre code {
@@ -83,6 +84,12 @@
     padding: 3px 6px;
 }
 
+.post ul,
+.post ol,
+.post blockquote {
+    padding-left: @margin;
+}
+
 .post-tag {
     color: #666;
     
@@ -117,12 +124,6 @@
 @media (max-width: @wrapper-width) {
     .post {
         padding: 0px;
-    }
-    
-    .post > pre {
-        border-radius: 0px;
-        padding-left: @margin-mobile;
-        padding-right: @margin-mobile;
     }
 }
 

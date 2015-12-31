@@ -102,8 +102,8 @@ blockquote > * {
 ul,
 ol,
 blockquote {
-    margin-left: 1.5em;
-    margin-right: 16px;
+    padding-left: 48px;
+    padding-right: 32px;
 }
 ul,
 ol {
@@ -116,6 +116,14 @@ ol li {
 hr {
     border: 0;
     border-bottom: 1px solid #d8d8d8;
+}
+@media (max-width: 700px) {
+    ul,
+    ol,
+    blockquote {
+        padding-left: 24px;
+        padding-right: 16px;
+    }
 }
 /**
  * Essential styles
@@ -196,6 +204,7 @@ hr {
 .navigation .links {
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 .navigation li {
     margin: 0;
@@ -333,6 +342,7 @@ hr {
     overflow: hidden;
     overflow-x: auto;
     max-width: 100%;
+    padding: 0;
 }
 .post pre code {
     background: transparent;
@@ -360,6 +370,11 @@ hr {
     background-color: #eee;
     border-radius: 3px;
     padding: 3px 6px;
+}
+.post ul,
+.post ol,
+.post blockquote {
+    padding-left: 32px;
 }
 .post-tag {
     color: #666;
@@ -389,11 +404,6 @@ hr {
     .post {
         padding: 0;
     }
-    .post > pre {
-        border-radius: 0;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
 }
 @media (min-width: 700px) {
     .post > * {
@@ -407,15 +417,6 @@ hr {
 .projects {
     padding-left: 32px;
     padding-right: 32px;
-}
-.project:first-child {
-    border-radius: 8px 8px 0 0;
-}
-.project:last-child {
-    border-radius: 0 0 8px 8px;
-}
-.project {
-    overflow: hidden;
 }
 .project h2 {
     margin-top: 0;
@@ -431,24 +432,10 @@ hr {
     font-size: 12px;
     margin-bottom: 3em;
 }
-.project-image {
-    background-repeat: no-repeat;
-    background-position: left center;
-    max-width: 100%;
-    padding: 32px;
-    width: 100%;
-}
-@media (max-width: 700px) {
-    .project-image {
-        padding: 16px;
-    }
-}
 @media (max-width: 700px) {
     .projects {
-        padding: 0;
-    }
-    .projects .project {
-        border-radius: 0;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
 /**
@@ -625,4 +612,9 @@ hr {
 .likely-separated .likely:last-child,
 .likely-separated .likely:last-child > * {
     margin-bottom: 0;
+}
+@media (max-width: 700px) {
+    .likely .likely__widget {
+        margin-bottom: 0.5em;
+    }
 }

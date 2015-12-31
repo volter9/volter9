@@ -92,8 +92,8 @@ blockquote > * {
 ul,
 ol,
 blockquote {
-    margin-left: 1.5em;
-    margin-right: @margin-mobile;
+    padding-left: @margin * 1.5;
+    padding-right: @margin;
 }
 
 ul,
@@ -109,4 +109,13 @@ ol li {
 hr {
     border: 0px;
     border-bottom: 1px solid #d8d8d8;
+}
+
+@media (max-width: @min-width) {
+    ul,
+    ol,
+    blockquote {
+        padding-left: @margin-mobile * 1.5;
+        padding-right: @margin-mobile;
+    }
 }

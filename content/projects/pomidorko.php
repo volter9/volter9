@@ -3,7 +3,7 @@
 техники это распределенние времени таким образом чтобы перенагружать мозг, 
 давая себе и мозгу сделать небольшой перерыв. 
 
-<div id="pomidorko" style="background-color: #ED4455; border-radius: 8px; margin-bottom: 1em">
+<div id="pomidorko" style="margin-bottom: 1em">
     <div class="pa-skip">
         <span>Пропустить</span>
     </div>

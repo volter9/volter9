@@ -2,7 +2,7 @@
  * Welcome there, traveler
  * 
  * @author volter9
- * @package volter9.github.io - my website
+ * @package volter9.github.io - Personal blog
  */
 /** Essentials */
 /**
@@ -46,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: normal;
+    font-weight: 100;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
@@ -76,23 +76,21 @@ hr {
     line-height: 150%;
     margin-bottom: 1em;
 }
-p {
-    font-size: 16px;
-}
 p code,
 li code,
 blockquote code {
-    background: #f4f4f4;
     border: 1px solid #d4d4d4;
     border-radius: 2px;
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     font-size: 80%;
     line-height: 1;
     display: inline-block;
-    padding: 3px 6px 2px 6px;
+    margin: 0 1px;
+    padding: 3px 4px;
 }
 blockquote {
     color: #888;
+    font-family: Georgia, serif;
 }
 blockquote p {
     font-size: 14px;
@@ -141,16 +139,16 @@ hr {
 .full-padding > *,
 .fluid {
     padding-left: 32px;
-    padding-right: 16px;
-    max-width: 900px;
+    padding-right: 32px;
+    max-width: 700px;
 }
 .wrapper {
     position: relative;
     top: 0;
     left: 0;
     min-height: 100%;
-    max-width: 900px;
     margin: 0 auto;
+    max-width: 700px;
     padding-bottom: 5em;
 }
 .columns-2 > * {
@@ -158,9 +156,6 @@ hr {
 }
 .adaptive {
     margin-left: 32px;
-}
-.content {
-    padding-top: 1px;
 }
 .full {
     margin-left: 0;
@@ -170,7 +165,7 @@ hr {
     padding: 0;
     width: 100%;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .full-padding > *,
     .fluid {
         max-width: 100%;
@@ -196,6 +191,7 @@ hr {
 .navigation {
     margin-bottom: 32px;
     padding-left: 20px;
+    padding-top: 10px;
 }
 .navigation .links {
     list-style: none;
@@ -204,13 +200,23 @@ hr {
 .navigation li {
     margin: 0;
 }
+.navigation .avatar {
+    background-color: #eee;
+    border-radius: 100%;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+}
 .navigation a {
     border-bottom: 0;
     color: #28d;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 100;
     text-decoration: none;
     display: block;
+    margin-right: 8px;
     padding: 8px 12px;
+}
+.nav-link {
+    margin-top: 40px;
 }
 .navigation a:hover {
     text-decoration: underline;
@@ -225,23 +231,11 @@ hr {
 .navigation-white a {
     color: #fff;
 }
-.navigation-white .current,
-.navigation-white a:hover {
-    color: #fff;
-    text-decoration: none;
-    padding-top: 6px;
-}
-.navigation-white .current {
-    border-top: 2px solid #fff;
-}
-.navigation-white a:hover {
-    border-top: 2px solid rgba(255, 255, 255, 0.5);
-}
 .navigation-shadow a,
 .text-shadow {
     text-shadow: 0 0 10px #000;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .navigation {
         padding-left: 4px;
     }
@@ -264,7 +258,7 @@ hr {
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .epic-header {
         border-radius: 0;
     }
@@ -273,27 +267,34 @@ hr {
  * Footer
  */
 .footer {
-    color: #999;
+    border-radius: 8px 8px 0 0;
+    color: #aaa;
+    font-weight: 100;
     position: absolute;
     bottom: 0;
     left: 0;
-    padding-bottom: 24px;
+    max-width: 100%;
+    padding-bottom: 16px;
+    width: 100%;
 }
 .footer-menu {
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
 }
 .footer-menu li {
     float: left;
-    margin-right: 8px;
+    margin-right: 12px;
 }
-.footer-menu li:after {
-    color: #666;
-    content: "–";
-    margin-left: 4px;
+.footer-menu .right {
+    margin-left: 12px;
+    margin-right: 0;
+    float: right;
 }
-.footer-menu li:last-child:after {
-    content: "";
+.footer-menu .up {
+    font-size: 16px;
+}
+.footer-menu .up a {
+    border-bottom: 0;
 }
 /** 
  * Blog styles
@@ -307,6 +308,7 @@ hr {
 .post-title {
     font-size: 32px;
     margin-top: 0;
+    margin-bottom: 1em;
 }
 /**
  * Blog posts
@@ -321,23 +323,16 @@ hr {
     padding-left: 32px;
     padding-right: 32px;
 }
-.post .likely__widget:first-child {
-    margin-left: -3px;
-}
-.post .likely__widget:first-child {
-    margin-left: -2px !important;
-}
 .likely-separated .likely__widget {
     margin-bottom: 0.4em;
 }
 .post pre {
     background-color: #f4f4f4;
     font-family: Menlo, Monaco, monospace;
-    font-size: 14px;
+    font-size: 12px;
     overflow: hidden;
     overflow-x: auto;
     max-width: 100%;
-    padding: 0;
 }
 .post pre code {
     background: transparent;
@@ -345,9 +340,6 @@ hr {
     font-size: inherit;
     display: block;
     padding: 16px;
-}
-.post > pre {
-    border-radius: 8px;
 }
 .post hr {
     max-width: 100%;
@@ -388,12 +380,12 @@ hr {
     margin-top: 2em;
     margin-bottom: 2em;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .post {
         padding-left: 0;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .post {
         padding: 0;
     }
@@ -403,7 +395,7 @@ hr {
         padding-right: 16px;
     }
 }
-@media (min-width: 900px) {
+@media (min-width: 700px) {
     .post > * {
         padding-left: 0;
         padding-right: 0;
@@ -430,15 +422,7 @@ hr {
 }
 .project-title,
 .project-about {
-    color: #fff;
-}
-.project-title a {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    color: #fff;
-}
-.project-title a:hover {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-    color: #fff;
+    color: #000;
 }
 .project-title {
     font-size: 18px;
@@ -454,12 +438,12 @@ hr {
     padding: 32px;
     width: 100%;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .project-image {
         padding: 16px;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .projects {
         padding: 0;
     }
@@ -470,16 +454,13 @@ hr {
 /**
  * About me section
  */
-.about-me-text {
-    width: 85%;
-}
 .about-me-text h2 {
     margin-top: 0;
 }
 .about-me-text p:last-child {
     margin: 0;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .about-me {
         margin-top: -16px;
     }
@@ -498,7 +479,6 @@ hr {
  * Spoiler styles
  */
 .spoiler {
-    border-radius: 8px;
     overflow: hidden;
     overflow-x: auto;
     position: relative;
@@ -511,7 +491,6 @@ hr {
 }
 .spoiler pre {
     margin-bottom: 0;
-    padding-left: 16px;
 }
 .spoiler-toggle {
     background-color: rgba(0, 0, 0, 0.025);
@@ -559,14 +538,14 @@ hr {
     -webkit-transform: rotate(-90deg);
     margin-right: 3px;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .spoiler {
         margin-left: 0;
         margin-right: 0;
         padding: 0;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .spoiler {
         border-radius: 0;
     }
@@ -575,7 +554,6 @@ hr {
  * Tabs 
  */
 .tabs-container {
-    border-radius: 8px;
     overflow: hidden;
     position: relative;
     margin-bottom: 1em;
@@ -609,17 +587,17 @@ hr {
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 0;
-    width: 200px;
+    width: 150px;
 }
 .tabs ~ * {
-    padding-left: 200px;
+    padding-left: 150px;
 }
 .tabs .tab:hover,
 .tabs .tab-active {
     background-color: #eee;
     cursor: pointer;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .tabs ~ * {
         padding-left: 0;
     }
@@ -635,7 +613,7 @@ hr {
         padding: 6px 14px;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .tabs-container {
         border-radius: 0;
     }

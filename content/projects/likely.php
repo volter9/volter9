@@ -1,3 +1,9 @@
+<?php $_url = $url->make('assets/uploads/likely/lights.jpg'); ?>
+
+<div class="text-shadow" style="background-size: cover; background-position: 0px 50%; background-image: url('<?php echo $_url ?>'); padding: 32px; margin-bottom: 1em; border-radius: 8px">
+    <?php echo $theme->partial('blocks/likely.jade', ['classes' => 'likely-big likely-light']) ?> 
+</div>
+
 <a href="http://ilyabirman.ru/projects/likely" target="_blank">Лайкли</a> &mdash;
 это красивые социокнопоки с счетчиками. Лайкли поддерживает шаринг страницы
 в Фейсбуке, Твиттере, Вконтакте, Гугл плюсе, Пинтересте и Одноклассниках.
@@ -114,7 +120,7 @@ module.exports = function (value) {
         }
     };
 };
-<?php echo spoiler_code(ob_get_clean(), 'js', 'big') ?>
+<?php echo code(ob_get_clean(), 'js', 'big') ?>
 
 <?php
 

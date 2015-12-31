@@ -3,23 +3,15 @@
 <div class="clearfix full projects">
 <?php foreach ($projects as $project): ?> 
     <div class="project left full">
+        <h2 class="project-title">
+            <a href="<?php echo $url->make("projects/{$project['name']}") ?>">
+                <?php echo $project['title'] ?> 
+            </a>
+        </h2>
 
-<?php ob_start() ?>
-<h2 class="project-title">
-    <a href="<?php echo $url->make("projects/{$project['name']}") ?>">
-        <?php echo $project['title'] ?> 
-    </a>
-</h2>
-
-<p class="project-about">
-    <?php echo $project['about'] ?> 
-</p>
-<?php $content = ob_get_clean() ?>
-        
-        <?php echo Bloge\render(
-            basepath("content/_projects/{$project['name']}/banner.php"), 
-            compact('content', 'theme', 'url')
-        ) ?>
+        <p class="project-about">
+            <?php echo $project['about'] ?> 
+        </p>
     </div>
 <?php endforeach ?> 
 </div>

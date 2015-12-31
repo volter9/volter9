@@ -26,7 +26,7 @@ use Volter\URL;
 
 $parsedown = Bloge\process('content', [new Parsedown, 'text']);
 
-$renderer = new Renderer(basepath('theme'), basepath('cache'));
+$renderer = new Renderer(basepath('theme'));
 $content  = new Advanced(new Content(basepath('content')));
 
 /** 

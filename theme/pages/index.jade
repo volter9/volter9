@@ -5,18 +5,20 @@ block content
     div.about-me.full
         div.fluid.clearfix
             div.about-me-text.left
-                h2 Немножко обо мне
-            
-                != content
-                // А также я люблю дразнить дизайнеров таким расположением блока :P
-            
                 div.columns-2.clearfix
                     // Блог
                     div.blog.left
-                        h3 Последнии записи
+                        h2 Блог
                     
                         include ../snippets/posts
+                    
+                    div.blog.right
+                        h2 Немножко обо мне
+                        
+                        != content
                 
+                
+                div.columns-2.clearfix
                     // Проекты
                     div.blog.left
                         h3 Проекты
@@ -26,3 +28,14 @@ block content
                                 li
                                     a(href=$url->make('projects/' . $project['name']))
                                         = project.title
+                    
+                    div.blog.right
+                        h3 Контакты
+                
+                        ul(style="margin: 0px")
+                            li Twitter –
+                                a(href="https://twitter.com/volter_9", target="_blank") @volter_9
+                            li GitHub –
+                                a(href="https://github.com/volter9", target="_blank") @volter9 
+                            li Почта –
+                                = 'volter925@gmail.com'

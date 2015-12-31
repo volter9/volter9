@@ -5,6 +5,7 @@
 .navigation {
     margin-bottom: @margin;
     padding-left: 20px;
+    padding-top: 10px;
 }
 
 .navigation .links {
@@ -17,14 +18,26 @@
     margin: 0px;
 }
 
+.navigation .avatar {
+    background-color: #eee;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
 .navigation a {
     border-bottom: 0px;
     color: #28d;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 100;
     text-decoration: none;
     
     display: block;
+    margin-right: 8px;
     padding: 8px 12px;
+}
+
+.nav-link {
+    margin-top: 40px;
 }
 
 .navigation a:hover {
@@ -42,22 +55,6 @@
 
 .navigation-white a {
     color: #fff;
-}
-
-.navigation-white .current,
-.navigation-white a:hover {
-    color: #fff;
-    text-decoration: none;
-    
-    padding-top: 6px;
-}
-
-.navigation-white .current {
-    border-top: 2px solid #fff;
-}
-
-.navigation-white a:hover {
-    border-top: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .navigation-shadow a,

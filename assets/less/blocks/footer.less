@@ -3,32 +3,40 @@
  */
 
 .footer {
-    color: #999;
+    border-radius: 8px 8px 0px 0px;
+    color: #aaa;
+    font-weight: 100;
     
     position: absolute;
     bottom: 0px;
     left: 0px;
     
-    padding-bottom: 24px;
+    max-width: 100%;
+    padding-bottom: @margin-mobile;
+    width: 100%;
 }
 
 .footer-menu {
     list-style: none;
     
-    margin: 0px;
+    margin: 0px auto;
 }
 
 .footer-menu li {
     float: left;
-    margin-right: 8px;
+    margin-right: 12px;
 }
 
-.footer-menu li:after {
-    color: #666;
-    content: "–";
-    margin-left: 4px;
+.footer-menu .right {
+    margin-left: 12px;
+    margin-right: 0px;
+    float: right;
 }
 
-.footer-menu li:last-child:after {
-    content: "";
+.footer-menu .up {
+    font-size: 16px;
+}
+
+.footer-menu .up a {
+    border-bottom: 0px;
 }

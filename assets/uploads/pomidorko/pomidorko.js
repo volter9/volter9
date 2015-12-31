@@ -94,7 +94,7 @@ var components = pomidorko.components,
 
 pomidorko.bootstrap.reset();
 pomidorko.lang.set({
-    "skip":["Пропустить","Пропустить"]
+    "skip":["Пропустить помидорку","Пропустить перерыв"]
 });
 
 var container = dom.find('#pomidorko'),

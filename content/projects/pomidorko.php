@@ -3,6 +3,34 @@
 техники это распределенние времени таким образом чтобы перенагружать мозг, 
 давая себе и мозгу сделать небольшой перерыв. 
 
+<div id="pomidorko" style="background-color: #ED4455; border-radius: 8px; margin-bottom: 1em">
+    <div class="pa-skip">
+        <span>Пропустить</span>
+    </div>
+    
+    <div class="pa-timer clearfix">
+        <div class="pa-left-block">
+            <div class="pa-timer-time">
+                <span class="pa-min">00</span>
+                <span class="pa-colon">:</span>
+                <span class="pa-sec">00</span>
+            </div>
+        </div>
+        
+        <div class="pa-timer-scale pa-right-block">
+            <div class="pa-timer-wrapper">
+                <img srcset="<?php echo $url->make('assets/uploads/pomidorko/img/scale@2x.png') ?> 2x"
+                     src="<?php echo $url->make('assets/uploads/pomidorko/img/scale.png') ?>"
+                     alt="Шкала времени">
+            </div>
+        </div>
+    </div>
+    
+    <div class="pa-timer-control pa-play">
+        <span class="pa-icon pa-play"></span>
+    </div>
+</div>
+
 <a href="http://omelekhin.ru" target="_target">Паша Омелёхин</a> и я создали
 этот таймер. Помидорковый таймер также доступен на
 <a href="http://pomidorko.com/" target="_blank">Английском</a>.
@@ -30,14 +58,13 @@
 
 ### Компоненты
 
-Компоненты это "классы" которые 
 Компоненты принимают DOM узел и объекты на которые можно повесить события, вроде
 моделей и таймера. У каждого компонента имеется обязтаельный activate метод который 
 запускает компонент (привязывает события к таймеру/модели и отображает/меняет 
 состояние модели).
 
 Вот пример компонента который меняет Favicon в зависимости от состояния таймера 
-(перерыв/помидорка):
+(перерыв/работа):
 
 <?php ob_start() ?>
 var Component = require('./component');
@@ -66,7 +93,7 @@ module.exports = Component.extend({
         this.link.href = 'assets/img/' + icon;
     }
 });
-<?php echo spoiler_code(ob_get_clean(), 'js', 'big') ?> 
+<?php echo code(ob_get_clean(), 'js', 'big') ?> 
 
 Организуя весь код в модулях, изолирует отдельный функционал от остального кода
 и обязывает данный код в модуле иметь одну обязанность, тем самым делая код 
@@ -144,7 +171,7 @@ var services = [
 services.forEach(function (service) {
     service.activate();
 });
-<?php echo spoiler_code(ob_get_clean(), 'js', 'big') ?> 
+<?php echo code(ob_get_clean(), 'js', 'big') ?> 
 
 Ну и конечно же нужно до этого загрузить HTML.
 
@@ -196,7 +223,7 @@ mkdir assets/sounds
 put -zf ./build/$LANG.html index.php
 $FILES
 EOF
-<?php echo spoiler_code(ob_get_clean(), 'sh', 'big') ?>
+<?php echo code(ob_get_clean(), 'sh', 'big') ?>
 
 Данный скрипт загружает разницу файлов между сейчашним и последним созданным 
 коммитом на FTP сервер. Если этому скрипту дать третий аргумент который равен 
@@ -219,9 +246,8 @@ make deploy FULL_DEPLOY=true
 <?php
 
 return [
-    'title'  => 'Помидорковый таймер',
-    'name'   => 'pomidorko',
-    'view'   => 'templates/project.jade',
-    'layout' => 'layouts/project.jade',
+    'title'     => 'Помидорковый таймер',
+    // 'name'   => 'pomidorko',
+    'view'      => 'templates/project.jade',
     'processor' => 'markdown'
 ];

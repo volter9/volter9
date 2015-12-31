@@ -2,9 +2,14 @@
 
 nav(class='fluid navigation#{classes}')
     ul.clearfix.links
-        each item in $data->get('navigation')
-            li.left
-                - $current = $url->isCurrent($item['url'], $route) ? 'current' : ''
-            
-                a(class=$current, href=$url->make($item['url']))
-                    = item.title
+        li.left
+            a(href=$url->make())
+                img.avatar(
+                    alt="logo",
+                    src=$url->make('assets/img/avatar_small.png')
+                )
+        
+        li.left
+            a(href=$url->make('blog')).nav-link Блог
+        li.left
+            a(href=$url->make('projects')).nav-link Проекты

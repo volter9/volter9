@@ -40,7 +40,6 @@ $content
 /** 
  * Processor: process markdown inside of the articles 
  */
-
 $content
     ->processor()
     ->add(function ($route, array $data) use ($parsedown) {
@@ -52,7 +51,6 @@ $content
 /** 
  * DataMapper: map default variables, route and content map 
  */
-
 $content
     ->dataMapper()
     ->mapAll([

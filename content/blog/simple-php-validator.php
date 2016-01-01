@@ -118,7 +118,7 @@ function parse_rule ($rule) {
 ```php
 $rules = [
     /* Упрощенная запись */
-    'name' => 'required',
+    'name' => 'required|confirm:password_confirm',
     
     /* Обычная запись */
     'password' => [

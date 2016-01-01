@@ -84,7 +84,7 @@ $.Deferred API.
 Social Likes и Лайкли использовали $.Deferred только для `.always()`, поэтому 
 вместо аналога $.Deferred я решил написать что то вроде `ko.observable()`:
 
-<?php ob_start() ?>
+```js
 /**
  * Factory function
  * 
@@ -120,7 +120,7 @@ module.exports = function (value) {
         }
     };
 };
-<?php echo code(ob_get_clean(), 'js', 'big') ?>
+```
 
 <?php
 

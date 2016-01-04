@@ -1,7 +1,9 @@
 extends ../layouts/main
 
 block content
+    - $posts = blog_posts($container)
+    
     article.content.full.full-padding
         h1.post-title= title
-
+        
         include ../snippets/posts

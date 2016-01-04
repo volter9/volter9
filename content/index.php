@@ -9,7 +9,5 @@
 </p>
 
 <?php return [
-    'projects' => array_slice($data->get('projects'), 0, 5),
-    'posts'    => blog_posts($container, 5),
-    'view'     => 'pages/index.jade'
+    'view' => 'pages/index.jade'
 ]; 

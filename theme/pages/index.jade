@@ -1,6 +1,9 @@
 extends ../layouts/main
 
 block content
+    - $posts = blog_posts($container, 5)
+    - $projects = array_slice($data->get('projects'), 0, 5)
+    
     // Обо мне
     div.about-me.full
         div.fluid.clearfix

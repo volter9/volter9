@@ -12,6 +12,8 @@
     },
     "require": {
         "bloge/bloge": "dev-master",
-        "bloge/jade-renderer": "dev-master"
+        "bloge/jade-renderer": "dev-master",
+        "mustangostang/spyc": "^0.5.1",
+        "erusev/parsedown": "^1.6"
     }
 }
